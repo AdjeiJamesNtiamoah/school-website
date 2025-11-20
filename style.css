@@ -258,3 +258,72 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* --- Styles for "About Us" and other sub-pages --- */
+
+/* Style for the hero image on sub-pages */
+.page-hero {
+    background-image: linear-gradient(rgba(0, 86, 179, 0.7), rgba(0, 86, 179, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-color);
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* Style to highlight the current page in the navigation */
+nav ul li a.current-page {
+    color: var(--dark-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 2px;
+}
+
+/* Leadership Section Styles */
+.leadership-section {
+    padding: 60px 0;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.leader-card {
+    background: var(--light-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-5px);
+}
+
+.leader-card img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.leader-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.leader-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments for leadership grid */
+@media(max-width: 768px) {
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+}

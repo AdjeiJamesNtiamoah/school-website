@@ -143,6 +143,22 @@
             </div>
         </div>
     </footer>
+<script>
+    // This function checks if an element is in the viewport
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            // If the element is visible...
+            if (entry.isIntersecting) {
+                // ...add the 'show' class to it
+                entry.target.classList.add('show');
+            }
+        });
+    });
 
+    // Find all elements with the 'fade-in' class
+    const hiddenElements = document.querySelectorAll('.fade-in');
+    // Tell the observer to watch each of them
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>
 </body>
 </html>

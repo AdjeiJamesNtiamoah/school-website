@@ -327,3 +327,135 @@ nav ul li a.current-page {
         grid-template-columns: 1fr;
     }
 }
+/* --- Styles for "Admissions" Page --- */
+
+/* Style for the hero image on the Admissions page */
+.admissions-hero {
+    background-image: linear-gradient(rgba(0, 86, 179, 0.7), rgba(0, 86, 179, 0.7)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-color);
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* Process Section Styles */
+.process-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.process-card {
+    position: relative;
+    background: var(--light-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 40px 20px 20px 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.process-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.process-card h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Content & Info Section Styles */
+.content-section {
+    padding: 60px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.info-card {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Key Dates Section Styles */
+.key-dates-section {
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+}
+
+.key-dates-section .container {
+    text-align: center;
+}
+
+.dates-list {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+    border-top: 1px solid #ccc;
+}
+
+.date-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.date-item .date {
+    font-weight: 700;
+    color: var(--primary-color);
+    min-width: 120px;
+}
+
+/* Responsive adjustments for admissions grid */
+@media(max-width: 992px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

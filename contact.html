@@ -60,7 +60,11 @@
 
                     <div class="contact-form-wrapper">
                         <h2>Send Us a Message</h2>
-                        <form class="contact-form" action="#" method="POST">
+                        <div id="thank-you-message" style="display: none; background-color: #e8f5e9; border: 1px solid #4caf50; color: #2e7d32; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+                            <h3>Thank you for your message!</h3>
+                            <p>We have received your inquiry and will get back to you shortly.</p>
+                        </div>
+                        <form class="contact-form" action="https://formspree.io/f/mkgegyaa" method="POST">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
 
@@ -143,6 +147,21 @@
     const hiddenElements = document.querySelectorAll('.fade-in');
     // Tell the observer to watch each of them
     hiddenElements.forEach((el) => observer.observe(el));
+</script>
+    <script>
+    window.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector(".contact-form");
+        const thankYouMessage = document.getElementById("thank-you-message");
+
+        form.addEventListener("submit", function(event) {
+            // We don't prevent the default submission because we want Formspree to handle it
+            // We just hide the form and show the message after a short delay
+            setTimeout(() => {
+                form.style.display = "none";
+                thankYouMessage.style.display = "block";
+            }, 500); // 500ms delay
+        });
+    });
 </script>
 </body>
 </html>

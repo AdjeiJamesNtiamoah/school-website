@@ -914,3 +914,52 @@ nav ul li a.current-page {
     filter: blur(0); /* Remove the blur */
     transform: translateY(0); /* Move to its final position */
 }
+/* --- Accreditations Section --- */
+.accreditations-section {
+    background-color: #f8f9fa; /* Use a light background to make it stand out */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.accreditations-section h2 {
+    margin-bottom: 10px;
+}
+
+.accreditations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.accreditation-logo {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.accreditation-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+}
+
+.accreditation-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures logos are not distorted */
+    filter: grayscale(100%); /* Start with grayscale */
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.accreditation-logo:hover img {
+    filter: grayscale(0%); /* Turn to color on hover */
+    opacity: 1;
+}

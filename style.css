@@ -90,7 +90,29 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+/* --- Parent Portal Button --- */
+.portal-button {
+    background-color: #28a745; /* A welcoming green color */
+    color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds space between icon and text */
+    transition: background-color 0.3s ease;
+}
 
+.portal-button:hover {
+    background-color: #218838; /* A darker green on hover */
+    color: var(--light-color);
+}
+
+.portal-button i {
+    font-size: 1rem;
+}
 /* --- Hero Section --- */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1581078426770-6d336e5de7bf?q=80&w=2070&auto=format&fit=crop');

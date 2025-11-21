@@ -239,5 +239,33 @@
     <span class="close-button">&times;</span>
     <img class="lightbox-content" id="lightbox-img">
 </div>
+    <script>
+    // Get all gallery items and the lightbox elements
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeButton = document.querySelector('.close-button');
+
+    // Add click event to each gallery item
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            lightbox.style.display = 'block';
+            lightboxImg.src = this.src; // Set the lightbox image src to the clicked image's src
+        });
+    });
+
+    // Close the lightbox when the user clicks on the close button
+    closeButton.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+    });
+
+    // Close the lightbox when the user clicks anywhere on the overlay background
+    lightbox.addEventListener('click', function(event) {
+        // Check if the clicked element is the background itself, not the image
+        if (event.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>

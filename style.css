@@ -1066,3 +1066,121 @@ nav ul li a.current-page {
     animation-name: zoom;
     animation-duration: 0.3s;
 }
+/* --- Styles for "Tuition & Financial Aid" Page --- */
+
+/* Style for the hero image on the Tuition page */
+.tuition-hero {
+    background-image: linear-gradient(rgba(0, 86, 179, 0.7), rgba(0, 86, 179, 0.7)), url('https://images.unsplash.com/photo-1554224154-260325c0598c?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-color);
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* Tuition Table Styles */
+.tuition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tuition-table th, .tuition-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tuition-table thead th {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-weight: 600;
+}
+
+.tuition-table tbody tr:nth-of-type(even) {
+    background-color: var(--secondary-color);
+}
+
+.tuition-table tbody tr:hover {
+    background-color: #e2eafc;
+}
+
+/* Accordion Styles for Fees */
+.fees-section {
+    margin-top: 30px;
+}
+
+.accordion {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.accordion:hover, .accordion.active {
+    background-color: #d1e7dd;
+}
+
+.accordion-panel {
+    padding: 0 18px;
+    background-color: var(--light-color);
+    display: none;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.accordion-panel ul {
+    padding: 20px;
+    list-style-type: '✓ ';
+    padding-left: 30px;
+}
+
+.accordion-panel li {
+    margin-bottom: 10px;
+}
+
+/* Financial Aid Section Styles */
+.financial-aid-section {
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.aid-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.aid-card {
+    background: var(--light-color);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.aid-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+    .aid-grid {
+        grid-template-columns: 1fr;
+    }
+}
